@@ -39,7 +39,7 @@ const Public = () => {
   const handleDelete = (id) => {
     try {
       axios
-        .delete(`${BASE_URL}/blog/${id}`)
+        .delete(`${BASE_URL}/blog/${id}`,{headers: {Authorization: `Bearer ${token}`}})
         .then((res) => {
           console.log(res);
           toast.success("blog deleted successfully");
