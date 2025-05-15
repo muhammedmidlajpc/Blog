@@ -1,0 +1,28 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Optional: If you use VS Code
+.vscode/
+
+# Optional: Coverage reports from tests
+coverage/
+
+# Build outputs (if any)
+dist/
+
+# MongoDB dump files (optional, if you use mongodump)
+dump/
