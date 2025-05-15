@@ -30,14 +30,14 @@ module.exports.register = async (req, res) => {
         { expiresIn: "1d" }
       );
       console.log(token);
-      res.cookie("authToken", token, { httpOnly: true,secure: true,sameSite: "None"});
       res.status(200).json({
-        message: "your data has been registered!",
-        user: {
-          id: newUser.id,
-          email: newUser.email
-        }
-      });
+      message: "Your data has been registered!",
+      token,
+      user: {
+        id: newUser._id,
+        email: newUser.email
+      }
+    });
     }
   } catch (error) {
     res.status(500).json({ message: error.message });
