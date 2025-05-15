@@ -8,6 +8,7 @@ const Register = () => {
   console.log(BASE_URL);
   const [error, seterror] = useState({});
   const [formvalue, setformvalue] = useState({
+    name: "",
     email: "",
     password: ""
   });
@@ -34,6 +35,7 @@ const Register = () => {
             sessionStorage.setItem("authToken", res.data.token);
             navigate("/");
             setformvalue({
+              name: "",
               email: "",
               password: ""
             });
@@ -69,6 +71,17 @@ const Register = () => {
       <div className="bg-blue-300 p-6 rounded shadow-md w-full max-w-sm">
         <h2 className="text-2xl font-semibold mb-4 text-center">Register</h2>
         <form onSubmit={handleSubmit}>
+          <div className="mb-4">
+            <label className="block text-sm mb-1">Name</label>
+            <input
+              type="name"
+              className="w-full border px-3 py-2 rounded"
+              placeholder="Your Name"
+              name="name"
+              value={formvalue.name}
+              onChange={handleChange}
+            />
+          </div>
           <div className="mb-4">
             <label className="block text-sm mb-1">Email</label>
             <input
