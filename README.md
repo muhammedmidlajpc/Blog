@@ -31,6 +31,14 @@ A full-stack blog application built using **MongoDB**, **Express.js**, **React.j
 - dotenv
 
 ---
+🔐 Authentication
+JWT authentication is used for login/signup. Tokens are stored using sessionStorage and attached to protected routes via HTTP headers.
+
+🌐 Live Demo
+If deployed, add the URL here:
+
+Live App
+
 
 ## ⚙️ Installation
 
@@ -53,9 +61,9 @@ Edit
 MONGODB_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 PORT=5000
-Start the backend server:
+### Start the backend server:
 
-bash
+bash  
 Copy
 Edit
 npm start
@@ -66,13 +74,6 @@ Edit
 cd ../frontend
 npm install
 npm start
-🔐 Authentication
-JWT authentication is used for login/signup. Tokens are stored using sessionStorage and attached to protected routes via HTTP headers.
-
-🌐 Live Demo
-If deployed, add the URL here:
-
-Live App
 
 📝 License
 This project is licensed under the MIT License. See the LICENSE file for more information.
