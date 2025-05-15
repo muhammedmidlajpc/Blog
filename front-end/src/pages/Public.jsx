@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 const Public = () => {
   const userid = sessionStorage.getItem("userid");
+  const token = sessionStorage.getItem("authToken");
   const [Blogs, setBlogs] = useState([]);
   const [page, setpage] = useState(1);
   const [totalpage, settotalpage] = useState(1);
