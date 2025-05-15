@@ -20,7 +20,7 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     try {
-      console.log("Sign in with:", formvalue);
+      console.log("Sign in with:", formvalue.name);
       const errors = validate(formvalue);
       if (Object.keys(errors).length === 0) {
         seterror({});
