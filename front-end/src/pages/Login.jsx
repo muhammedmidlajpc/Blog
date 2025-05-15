@@ -32,6 +32,7 @@ const Login = () => {
             console.log("object");
             console.log(res.data.user.id);
             toast.success("Login success");
+            sessionStorage.setItem("authToken", res.data.token);
             sessionStorage.setItem("userid", res.data.user.id);
             navigate("/");
             setformvalue({
