@@ -39,6 +39,13 @@ If deployed, add the URL here:
 
 Live App
 
+📝 License
+This project is licensed under the MIT License. See the LICENSE file for more information.
+
+📧 Contact
+Created by Muhammed Midlaj PC
+email:midlajpc531@gmail.com
+ – feel free to contact me!
 
 ## ⚙️ Installation
 
@@ -61,7 +68,7 @@ Edit
 MONGODB_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 PORT=5000
-### Start the backend server:
+Start the backend server:
 
 bash  
 Copy
@@ -74,11 +81,3 @@ Edit
 cd ../frontend
 npm install
 npm start
-
-📝 License
-This project is licensed under the MIT License. See the LICENSE file for more information.
-
-📧 Contact
-Created by Muhammed Midlaj PC
-email:midlajpc531@gmail.com
- – feel free to contact me!
