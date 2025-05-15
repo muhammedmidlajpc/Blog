@@ -31,6 +31,7 @@ const Register = () => {
             console.log(res);
             toast.success("Register success");
             sessionStorage.setItem("userid", res.data.user.id);
+            sessionStorage.setItem("authToken", res.data.token);
             navigate("/");
             setformvalue({
               email: "",
