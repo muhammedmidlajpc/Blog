@@ -30,7 +30,7 @@ module.exports.register = async (req, res) => {
         { expiresIn: "1d" }
       );
       console.log(token);
-      res.cookie("authToken", token, { httpOnly: true, maxAge: 86400000 });
+      res.cookie("authToken", token, { httpOnly: true,secure: true,sameSite: "None"});
       res.status(200).json({
         message: "your data has been registered!",
         user: {
@@ -61,7 +61,7 @@ module.exports.login = async (req, res) => {
           { expiresIn: "1d" }
         );
         console.log(token);
-        res.cookie("authToken", token, { httpOnly: true, maxAge: 86400000 });
+        res.cookie("authToken", token, { httpOnly: true,secure: true,sameSite: "None"});
         res.status(200).json({
           message: "success",
           user: {
