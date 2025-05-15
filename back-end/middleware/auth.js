@@ -1,22 +1,24 @@
 const jwt = require("jsonwebtoken");
 
-const athenticate = (req, res, next) => {
-  const token = req.cookies?.authToken;
+const authenticate = (req, res, next) => {
+  const authHeader = req.headers.authorization;
+  const token = authHeader && authHeader.split(" ")[1];
+
   if (token) {
     jwt.verify(token, process.env.JWT_SECRET, (err, data) => {
       if (err) {
         console.log("JWT error", err);
-        return res.status(401).json({ message: "unauthorised" });
+        return res.status(401).json({ message: "Unauthorized" });
       } else {
         console.log("Token verified:", data);
-        console.log(token);
         req.userdetails = data;
         next();
       }
     });
   } else {
     console.log("No token found");
-    res.status(401).send("Unauthorized!");
+    res.status(401).send("Unauthorized");
   }
 };
-module.exports = athenticate;
+
+module.exports = authenticate;
