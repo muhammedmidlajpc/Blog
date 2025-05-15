@@ -10,6 +10,7 @@ const Blog = () => {
   const [isEdit, setisEdit] = useState(false);
   const blogid = useParams().id;
   const userid = sessionStorage.getItem("userid");
+  const token = sessionStorage.getItem("authToken");
   console.log(isEdit);
   const navigate = useNavigate();
   const [formvalue, setformvalue] = useState({
