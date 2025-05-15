@@ -38,8 +38,8 @@ const Blog = () => {
         return;
       }
       const request = isEdit
-        ? axios.put(`${BASE_URL}/blog/${blogid}`, formvalue)
-        : axios.post(`${BASE_URL}/blog`, formvalue);
+        ? axios.put(`${BASE_URL}/blog/${blogid}`, formvalue,{headers: {Authorization: `Bearer ${token}`}})
+        : axios.post(`${BASE_URL}/blog`, formvalue,{headers: {Authorization: `Bearer ${token}`}});
       request
         .then((res) => {
           console.log(res);
